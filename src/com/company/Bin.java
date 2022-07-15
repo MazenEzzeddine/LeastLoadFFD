@@ -9,6 +9,14 @@ public class Bin {
     private Integer currentCapacity;
     private ArrayList<Integer> assignedItems;
 
+    @Override
+    public String toString() {
+        return "Bin{" +
+                "binCapacity=" + binCapacity +
+                ", currentCapacity=" + currentCapacity +
+                ", assignedItems=" + assignedItems +
+                "}\n";
+    }
 
     public Integer getBinCapacity() {
         return binCapacity;
@@ -51,10 +59,4 @@ public class Bin {
         return binCapacity != null ? binCapacity.hashCode() : 0;
     }
 
-    @Override
-    public String toString() {
-        return "Bin{" +
-                "binCapacity=" + binCapacity +
-                '}';
-    }
 }
