@@ -30,19 +30,19 @@ public class FirstFitDecreasing {
 
 
 
-        List<Integer> mitems = new ArrayList<Integer>(items);
-        Collections.sort(mitems, Collections.reverseOrder());
-        for(int i = 0; i< mitems.size(); i++){
+        //List<Integer> mitems = new ArrayList<Integer>(items);
+        Collections.sort(items, Collections.reverseOrder());
+        for(int i = 0; i< items.size(); i++){
             int j;
             for( j=0; j<bins.size();j++){
-                if(mitems.get(i)<= bins.get(j).getCurrentCapacity()) {
-                    bins.get(j).assign(mitems.get(i));
+                if(items.get(i)<= bins.get(j).getCurrentCapacity()) {
+                    bins.get(j).assign(items.get(i));
                     break;
                 }
             }
            if(j==bins.size()) {
                b= new  Bin(bin.getBinCapacity());
-               b.assign(mitems.get(i));
+               b.assign(items.get(i));
                bins.add(b);
            }
         }

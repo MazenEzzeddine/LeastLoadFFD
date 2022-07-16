@@ -23,8 +23,7 @@ public class LeastLoadFFD {
         bins.add(b);
 
 
-        List<Integer> mitems = new ArrayList<Integer>(items);
-        Collections.sort(mitems, Collections.reverseOrder());
+        Collections.sort(items, Collections.reverseOrder());
 
         //Collections.sort(items, Collections.reverseOrder());
         while (true) {
@@ -33,12 +32,12 @@ public class LeastLoadFFD {
                 bb.reset();
             }
             int i;
-            for ( i = 0; i < mitems.size(); i++) {
+            for ( i = 0; i < items.size(); i++) {
                 int j;
                Collections.sort(bins);
                 for (j = 0; j < bins.size(); j++) {
-                    if (mitems.get(i) <= bins.get(j).getCurrentCapacity()) {
-                        bins.get(j).assign(mitems.get(i));
+                    if (items.get(i) <= bins.get(j).getCurrentCapacity()) {
+                        bins.get(j).assign(items.get(i));
                         break;
                     }
                 }
@@ -49,7 +48,7 @@ public class LeastLoadFFD {
                 }
             }
 
-            if (i==  mitems.size()) {
+            if (i==  items.size()) {
                 break;
             }
         }
