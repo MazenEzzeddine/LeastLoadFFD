@@ -3,7 +3,7 @@ package com.company;
 import java.util.ArrayList;
 import java.util.Objects;
 
-public class Bin {
+public class Bin implements Comparable<Bin> {
     private Integer binCapacity;
 
     private Integer currentCapacity;
@@ -20,6 +20,12 @@ public class Bin {
 
     public Integer getBinCapacity() {
         return binCapacity;
+    }
+
+
+    public void reset(){
+        assignedItems.clear();
+        currentCapacity = binCapacity;
     }
 
 
@@ -59,4 +65,10 @@ public class Bin {
         return binCapacity != null ? binCapacity.hashCode() : 0;
     }
 
+    @Override
+    public int compareTo(Bin o) {
+        //return currentCapacity.compareTo(o.currentCapacity);
+
+        return o.currentCapacity.compareTo(currentCapacity);
+    }
 }
