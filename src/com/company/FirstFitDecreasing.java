@@ -31,7 +31,7 @@ public class FirstFitDecreasing {
 
 
         //List<Integer> mitems = new ArrayList<Integer>(items);
-        Collections.sort(items, Collections.reverseOrder());
+        items.sort(Collections.reverseOrder());
         for(int i = 0; i< items.size(); i++){
             int j;
             for( j=0; j<bins.size();j++){

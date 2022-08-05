@@ -23,7 +23,7 @@ public class LeastLoadFFD {
         bins.add(b);
 
 
-        Collections.sort(items, Collections.reverseOrder());
+        items.sort(Collections.reverseOrder());
 
         //Collections.sort(items, Collections.reverseOrder());
         while (true) {

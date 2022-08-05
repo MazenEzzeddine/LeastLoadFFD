@@ -5,7 +5,6 @@ import java.util.Objects;
 
 public class Bin implements Comparable<Bin> {
     private Integer binCapacity;
-
     private Integer currentCapacity;
     private ArrayList<Integer> assignedItems;
 
@@ -28,20 +27,12 @@ public class Bin implements Comparable<Bin> {
         currentCapacity = binCapacity;
     }
 
-
-
-
-
-
     public Integer getCurrentCapacity() {
         return currentCapacity;
     }
-
     public void setCurrentCapacity(Integer currentCapacity) {
         this.currentCapacity = currentCapacity;
     }
-
-
 
     public Bin(Integer binCapacity) {
         this.binCapacity = binCapacity;
@@ -49,16 +40,10 @@ public class Bin implements Comparable<Bin> {
         assignedItems = new ArrayList<>();
     }
 
-
-
     public void assign(Integer item) {
         assignedItems.add(item);
         currentCapacity -= item;
     }
-
-
-
-
 
     @Override
     public int hashCode() {
@@ -67,8 +52,7 @@ public class Bin implements Comparable<Bin> {
 
     @Override
     public int compareTo(Bin o) {
-        //return currentCapacity.compareTo(o.currentCapacity);
-
+        //return currentCapacity.compareTo(o.currentCapacity)
         return o.currentCapacity.compareTo(currentCapacity);
     }
 }

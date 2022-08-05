@@ -12,14 +12,22 @@ public class Main {
         //List<Integer> items = List.of(10, 10, 15,5);
 
         List<Integer> items =  new ArrayList<>();
-        items.add(10);
+       /* items.add(10);
         items.add(10);
         items.add(15);
         items.add(5);
+*/
+        items.add(50);
+        items.add(40);
+        items.add(30);
+        items.add(30);
+        items.add(20);
 
 
 
-        Bin b = new Bin(30);
+
+
+        Bin b = new Bin(100);
         FirstFitDecreasing ffd = new FirstFitDecreasing(items, b);
         ffd.fit();
 
@@ -31,11 +39,6 @@ public class Main {
         llffd.fit();
 
         System.out.println(llffd.toString());
-
-
-
-
-
 
 
         // write your code here
